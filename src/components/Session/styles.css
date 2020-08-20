@@ -1,0 +1,38 @@
+.length-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.length-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.length-container * {
+    margin: 0 5px 5px 5px;
+}
+
+.arrow-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #eb144c;
+    color: white;
+    height: 40px;
+    width: 40px;
+    transition: background .3s ease-in-out;
+    outline-style: none;
+}
+
+.arrow-key svg {
+    height: 40px;
+    width: 40px;
+}
+
+.arrow-key:hover {
+    background: #411133;
+}
