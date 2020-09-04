@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiArrowUp, FiArrowDown } from 'react-icons/fi';
+import moment from 'moment';
 
 import './styles.css';
 
@@ -12,6 +13,8 @@ interface ILength {
 
 const Session: React.FC<ILength> = ({ title, length, arrowUpHandler, arrowDownHandler }) => {
     
+    const sessionLengthInMinutes = moment.duration(length, 's').minutes();
+
     return (
         <div className="length-container">
             <button className="arrow-key" onClick={arrowUpHandler}>
@@ -19,7 +22,7 @@ const Session: React.FC<ILength> = ({ title, length, arrowUpHandler, arrowDownHa
             </button>
             <div className="length-data">
                 <h3>{title}</h3>
-                <div>{length} min</div>
+                <div>{sessionLengthInMinutes} min</div>
             </div>
             <button className="arrow-key" onClick={arrowDownHandler}>
                 <FiArrowDown />
